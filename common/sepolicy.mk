@@ -33,3 +33,8 @@ endif
 
 # Selectively include legacy rules defined by the products
 -include device/aosp/sepolicy/legacy-common/sepolicy.mk
+
+# Include atv rules on atv product
+ifeq ($(PRODUCT_IS_ATV), true)
+include device/aosp/sepolicy/atv/sepolicy.mk
+endif
