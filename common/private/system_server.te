@@ -2,6 +2,8 @@ set_prop(system_server, shell_prop)
 
 allow system_server adbroot_service:service_manager find;
 
+allow system_server app_zygote:process getpgid;
+
 # Use HALs
 hal_client_domain(system_server, hal_lineage_fod)
 hal_client_domain(system_server, hal_lineage_touch)
